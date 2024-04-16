@@ -1,8 +1,11 @@
 import { useState } from "react";
 
-function useCounter(initialvalue: number, maxCount: number, minCount: number) {
-    const [count, setCount] = useState<number>(initialvalue) // state to track count
-    const [isEven, setIsEven] = useState(initialvalue % 2 === 0)
+export type CounterTypes = {
+    [key: string]: number;
+}
+function useCounter(initialValue: number, maxCount: number, minCount: number, step: number,) {
+    const [count, setCount] = useState<number>(initialValue) // state to track count
+    const [isEven, setIsEven] = useState(initialValue % 2 === 0)
 
 
 
@@ -48,7 +51,7 @@ function useCounter(initialvalue: number, maxCount: number, minCount: number) {
             alert("Min value achieved")
         }
     }
-    const reset = () => setCount(initialvalue)
+    const reset = () => setCount(initialValue)
 
 
 
