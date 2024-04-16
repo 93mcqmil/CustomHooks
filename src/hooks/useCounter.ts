@@ -18,7 +18,7 @@ function useCounter(initialvalue: number, maxCount: number, minCount: number) {
         }
     }
 
-    // function to decrement no further than MIN
+    // function to decrement no further than minimum
     const decrement = () => {
         if (count > minCount) {
             setCount(count => count - 1)
@@ -28,9 +28,9 @@ function useCounter(initialvalue: number, maxCount: number, minCount: number) {
         }
 
     }
-
+    //Step10 function
     const add10 = () => {
-        if (count > maxCount) {
+        if (count + 10 <= maxCount) {
             setCount(count + 10)
 
         } else {
@@ -38,10 +38,11 @@ function useCounter(initialvalue: number, maxCount: number, minCount: number) {
         }
 
     }
-
-    const min10 = () => {
-        if (count < minCount) {
+    // Minus 10 function
+    const minus10 = () => {
+        if (count - 10 >= minCount) {
             setCount(count - 10)
+
 
 
         } else {
@@ -53,7 +54,7 @@ function useCounter(initialvalue: number, maxCount: number, minCount: number) {
 
 
 
-    // Returns count and increment function
-    return { count, isEven, setCount, increment, add10, min10, decrement, reset, maxCount, minCount }
+    // Returns count and increment function and everything on here i'll like to use
+    return { count, isEven, setCount, increment, decrement, reset, maxCount, minCount }
 }
 export default useCounter;
