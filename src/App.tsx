@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./App.css";
+import Counter from "./Components/Counter/Counter";
 import Counter from "./Components/Counter/Counter";
 
 function App() {
