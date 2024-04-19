@@ -1,4 +1,5 @@
 import "./App.css";
+import Fetch from "./Components/Api";
 
 import Counter from "./Components/Counter";
 import ToogleButton from "./Components/ToogleButton";
@@ -10,6 +11,7 @@ function App() {
       <Counter initialValue={5} maxCount={15} minCount={0} step={2} />
       <Counter initialValue={20} maxCount={30} minCount={10} step={3} />
       <ToogleButton />
+      <Fetch />
     </>
   );
 }
