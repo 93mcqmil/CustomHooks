@@ -57,7 +57,7 @@ function useCounter(initialValue: number, maxCount: number, minCount: number, st
 
 
 
-    // Returns count and increment function and everything on here i'll like to use
-    return { count, isEven, setCount, increment, decrement, reset, maxCount, minCount }
+    // Returns count and increment function and everything on here i'd like to use
+    return { count, isEven, add10, minus10, setCount, increment, decrement, reset, maxCount, minCount }
 }
 export default useCounter;
